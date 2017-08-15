@@ -7,10 +7,11 @@ namespace Api.Controllers
     using Domain;
 
     [Route("api/user")]
-    public class UserController
+    public class UserController: Controller
     {
         
-        
+        [HttpGet]
+        public 
 
 
 
