@@ -28,7 +28,7 @@
 # misc
 /Docs
 /Database
-/Database/..
+/Database/*
 /.sass-cache
 /connect.lock
 /coverage
