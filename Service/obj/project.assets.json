@@ -1,7 +1,7 @@
 {
   "version": 2,
   "targets": {
-    ".NETStandard,Version=v1.5": {
+    ".NETStandard,Version=v1.4": {
       "Microsoft.NETCore.Platforms/1.1.0": {
         "type": "package",
         "compile": {
@@ -333,7 +333,7 @@
           "System.Runtime": "4.3.0"
         },
         "compile": {
-          "ref/netstandard1.5/System.Diagnostics.Tracing.dll": {}
+          "ref/netstandard1.3/System.Diagnostics.Tracing.dll": {}
         }
       },
       "System.Globalization/4.3.0": {
@@ -369,7 +369,7 @@
           "System.Threading.Tasks": "4.3.0"
         },
         "compile": {
-          "ref/netstandard1.5/System.IO.dll": {}
+          "ref/netstandard1.3/System.IO.dll": {}
         }
       },
       "System.IO.Compression/4.3.0": {
@@ -558,7 +558,7 @@
           "System.Runtime": "4.3.0"
         },
         "compile": {
-          "ref/netstandard1.5/System.Reflection.dll": {}
+          "ref/netstandard1.3/System.Reflection.dll": {}
         }
       },
       "System.Reflection.Extensions/4.3.0": {
@@ -604,7 +604,7 @@
           "Microsoft.NETCore.Targets": "1.1.0"
         },
         "compile": {
-          "ref/netstandard1.5/System.Runtime.dll": {}
+          "ref/netstandard1.3/System.Runtime.dll": {}
         }
       },
       "System.Runtime.Extensions/4.3.0": {
@@ -615,7 +615,7 @@
           "System.Runtime": "4.3.0"
         },
         "compile": {
-          "ref/netstandard1.5/System.Runtime.Extensions.dll": {}
+          "ref/netstandard1.3/System.Runtime.Extensions.dll": {}
         }
       },
       "System.Runtime.Handles/4.3.0": {
@@ -640,7 +640,7 @@
           "System.Runtime.Handles": "4.3.0"
         },
         "compile": {
-          "ref/netstandard1.5/System.Runtime.InteropServices.dll": {}
+          "ref/netstandard1.3/System.Runtime.InteropServices.dll": {}
         }
       },
       "System.Runtime.InteropServices.RuntimeInformation/4.3.0": {
@@ -886,6 +886,10 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "Data/1.0.0": {
+        "type": "project",
+        "framework": "Unsupported,Version=v0.0"
       }
     }
   },
@@ -3695,10 +3699,16 @@
         "system.xml.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xdocument.nuspec"
       ]
+    },
+    "Data/1.0.0": {
+      "type": "project",
+      "path": "../Data/Data.csproj",
+      "msbuildProject": "../Data/Data.csproj"
     }
   },
   "projectFileDependencyGroups": {
-    ".NETStandard,Version=v1.5": [
+    ".NETStandard,Version=v1.4": [
+      "Data >= 1.0.0",
       "NETStandard.Library >= 1.6.1"
     ]
   },
@@ -3708,25 +3718,29 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "m:\\Forum\\Domain\\Domain.csproj",
-      "projectName": "Domain",
-      "projectPath": "m:\\Forum\\Domain\\Domain.csproj",
-      "outputPath": "m:\\Forum\\Domain\\obj\\",
+      "projectUniqueName": "m:\\Forum\\Service\\Service.csproj",
+      "projectName": "Service",
+      "projectPath": "m:\\Forum\\Service\\Service.csproj",
+      "outputPath": "m:\\Forum\\Service\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
-        "netstandard1.5"
+        "netstandard1.4"
       ],
       "files": {
-        "lib/netstandard1.5/Domain.dll": "m:\\Forum\\Domain\\bin\\placeholder\\netstandard1.5\\Domain.dll"
+        "lib/netstandard1.4/Service.dll": "m:\\Forum\\Service\\bin\\placeholder\\netstandard1.4\\Service.dll"
       },
       "frameworks": {
-        "netstandard1.5": {
-          "projectReferences": {}
+        "netstandard1.4": {
+          "projectReferences": {
+            "m:\\Forum\\Data\\Data.csproj": {
+              "projectPath": "m:\\Forum\\Data\\Data.csproj"
+            }
+          }
         }
       }
     },
     "frameworks": {
-      "netstandard1.5": {
+      "netstandard1.4": {
         "dependencies": {
           "NETStandard.Library": {
             "target": "Package",

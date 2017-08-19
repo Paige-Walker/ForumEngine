@@ -1,0 +1,6 @@
+M:\Forum\Domain\bin\Debug\netstandard1.5\Domain.deps.json
+M:\Forum\Domain\bin\Debug\netstandard1.5\Domain.dll
+M:\Forum\Domain\bin\Debug\netstandard1.5\Domain.pdb
+M:\Forum\Domain\obj\Debug\netstandard1.5\Domain.AssemblyInfo.cs
+M:\Forum\Domain\obj\Debug\netstandard1.5\Domain.dll
+M:\Forum\Domain\obj\Debug\netstandard1.5\Domain.pdb

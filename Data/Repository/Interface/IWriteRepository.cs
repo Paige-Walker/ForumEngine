@@ -1,4 +1,4 @@
-namespace Domain.Repository
+namespace Data.Repository.Interface
 {
     public interface IWriteRepository<T> where T : class, new()
     {

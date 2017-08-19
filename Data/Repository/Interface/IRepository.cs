@@ -1,4 +1,4 @@
-namespace Domain.Repository
+namespace Data.Repository.Interface
 {
     using System;
     public abstract class IRepository<T>: IReadRepository<T>, IWriteRepository<T> where T: class, new()
