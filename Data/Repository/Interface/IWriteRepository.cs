@@ -1,11 +1,11 @@
 namespace Data.Repository.Interface
 {
-    public interface IWriteRepository<T> where T : class, new()
+    public interface IWriteRepository<TEntity> where TEntity : class
     {
-        T Delete(T item);
+        TEntity Delete(TEntity item);
 
-        T Create(T item);
+        TEntity Create(TEntity item);
 
-        T Update(T item);
+        TEntity Update(TEntity item);
     }
 }

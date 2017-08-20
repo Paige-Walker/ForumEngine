@@ -1,7 +1,11 @@
 namespace Data.Repository.Interface
 {
-    public interface IReadRepository<T> where T : class, new()
+    using System.Collections.Generic;
+
+    public interface IReadRepository<TEntity> where TEntity : class
     {
-         T Get(object id);
+         TEntity Get(object id);
+         IEnumerable<TEntity> GetAll();
+
     }
 }

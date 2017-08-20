@@ -1393,7 +1393,8 @@
         "type": "project",
         "framework": ".NETStandard,Version=v1.5",
         "dependencies": {
-          "NETStandard.Library": "1.6.1"
+          "NETStandard.Library": "1.6.1",
+          "mongocsharpdriver": "2.4.4"
         },
         "compile": {
           "bin/placeholder/netstandard1.5/Domain.dll": {}
@@ -5107,22 +5108,22 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "m:\\Forum\\Data\\Data.csproj",
+      "projectUniqueName": "M:\\Forum\\Data\\Data.csproj",
       "projectName": "Data",
-      "projectPath": "m:\\Forum\\Data\\Data.csproj",
-      "outputPath": "m:\\Forum\\Data\\obj\\",
+      "projectPath": "M:\\Forum\\Data\\Data.csproj",
+      "outputPath": "M:\\Forum\\Data\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netstandard1.5"
       ],
       "files": {
-        "lib/netstandard1.5/Data.dll": "m:\\Forum\\Data\\bin\\placeholder\\netstandard1.5\\Data.dll"
+        "lib/netstandard1.5/Data.dll": "M:\\Forum\\Data\\bin\\placeholder\\netstandard1.5\\Data.dll"
       },
       "frameworks": {
         "netstandard1.5": {
           "projectReferences": {
-            "m:\\Forum\\Domain\\Domain.csproj": {
-              "projectPath": "m:\\Forum\\Domain\\Domain.csproj"
+            "M:\\Forum\\Domain\\Domain.csproj": {
+              "projectPath": "M:\\Forum\\Domain\\Domain.csproj"
             }
           }
         }
