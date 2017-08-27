@@ -2,14 +2,16 @@ namespace Domain.User
 {
     using System;
 
+    using Domain.Generic;
+
     using MongoDB.Bson;
     using MongoDB.Bson.Serialization.Attributes;
 
-    public class User
+    public class User : IEntity<Guid>
     {
-        public ObjectId Id { get; set; }
+        public ObjectId MongoId { get; set; }
         [BsonElement("UserId")]
-        public Guid UserId { get; set; }
+        public Guid Id { get; set; }
         [BsonElement("Name")]
         public string Name { get; set; }
         [BsonElement("Email")]

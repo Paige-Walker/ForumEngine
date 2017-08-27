@@ -7,6 +7,7 @@ namespace Data.Repository.Implementation
 
 
     using Data.Repository.Interface;
+    using Data.Generic;
 
     using MongoDB.Bson;
     using MongoDB.Driver;
@@ -14,7 +15,7 @@ namespace Data.Repository.Implementation
 
     
     /// <summary> Base Repository Logic </summary>
-    public class MongoRepositoryBase<TEntity, TIdentifier> : IReadWriteRepository<TEntity> where TEntity : class
+    public class MongoRepositoryBase<TEntity> : IReadWriteRepository<TEntity>
     {
         private readonly IMongoDatabase _database;
 
@@ -25,7 +26,7 @@ namespace Data.Repository.Implementation
         }
 
         public TEntity Get(object id)
-            => this._database.GetCollection<TEntity>(typeof(TEntity).Name).Find(x => x.Id.Equals(id)).FirstOrDefaultAsync().Result;
+            => this._database.GetCollection<TEntity>(typeof(TEntity).Name).Find(x => x.TIdentifier.Equals(id)).FirstOrDefaultAsync().Result;
         
         public IEnumerable<TEntity> GetAll()
             => this._database.GetCollection<TEntity>(typeof(TEntity).Name).Find(new BsonDocument()).ToListAsync().Result;
