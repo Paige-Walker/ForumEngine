@@ -17,6 +17,6 @@ namespace Domain.User
         [BsonElement("Email")]
         public string Email { get; set; }
         [BsonElement("Permissions")]
-        public string[] Permissions { get; set; } // TODO: Maybe replace with a UserPermissions array instead.
+        public string[] Permissions { get; set; } // TODO: Maybe replace with a UserPermissions array instead; perhaps create Enum type for permissions in Domain.
     }
 }

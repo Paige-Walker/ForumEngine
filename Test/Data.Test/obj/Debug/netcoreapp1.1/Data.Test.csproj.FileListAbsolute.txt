@@ -1,0 +1,15 @@
+M:\Forum\Test\Data.Test\bin\Debug\netcoreapp1.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+M:\Forum\Test\Data.Test\bin\Debug\netcoreapp1.1\xunit.runner.utility.netstandard15.dll
+M:\Forum\Test\Data.Test\bin\Debug\netcoreapp1.1\xunit.runner.reporters.netstandard15.dll
+M:\Forum\Test\Data.Test\bin\Debug\netcoreapp1.1\Data.Test.deps.json
+M:\Forum\Test\Data.Test\bin\Debug\netcoreapp1.1\Data.Test.runtimeconfig.json
+M:\Forum\Test\Data.Test\bin\Debug\netcoreapp1.1\Data.Test.runtimeconfig.dev.json
+M:\Forum\Test\Data.Test\bin\Debug\netcoreapp1.1\Data.Test.dll
+M:\Forum\Test\Data.Test\bin\Debug\netcoreapp1.1\Data.Test.pdb
+M:\Forum\Test\Data.Test\bin\Debug\netcoreapp1.1\Data.dll
+M:\Forum\Test\Data.Test\bin\Debug\netcoreapp1.1\Domain.dll
+M:\Forum\Test\Data.Test\bin\Debug\netcoreapp1.1\Data.pdb
+M:\Forum\Test\Data.Test\bin\Debug\netcoreapp1.1\Domain.pdb
+M:\Forum\Test\Data.Test\obj\Debug\netcoreapp1.1\Data.Test.AssemblyInfo.cs
+M:\Forum\Test\Data.Test\obj\Debug\netcoreapp1.1\Data.Test.dll
+M:\Forum\Test\Data.Test\obj\Debug\netcoreapp1.1\Data.Test.pdb

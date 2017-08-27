@@ -8,9 +8,6 @@ namespace Service
 
     public static class ServiceStart
     {
-        public static void RegisterDependencies(this IServiceCollection collection)
-        {
-            collection.Add(new ServiceDescriptor(typeof(IRepository<>), typeof(RepositoryBase<>), ServiceLifetime.Transient));
-        }
+        
     }
 }

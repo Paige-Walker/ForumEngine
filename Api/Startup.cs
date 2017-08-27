@@ -32,12 +32,6 @@ namespace Api
         {
             // Add framework services.
             services.AddMvc();
-            services.AddAutoMapper();
-
-            // Register Dependencies in the service assembly
-            Service.ServiceStart.RegisterDependencies(services);
-
-
 
         }
 

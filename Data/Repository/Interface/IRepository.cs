@@ -1,7 +1,10 @@
 namespace Data.Repository.Interface
 {
-    public interface IWriteRepository<TEntity> where TEntity : class
+    using System;
+    public interface IRepository<TEntity>: IReadRepository<TEntity>, IWriteRepository<TEntity> where TEntity: class
     {
+        TEntity Get(object id);
+
         TEntity Delete(TEntity item);
 
         TEntity Create(TEntity item);

@@ -7,7 +7,7 @@ namespace Data.Repository.Implementation
 
 
     using Data.Repository.Interface;
-    using Data.Generic;
+    using Domain.Generic;
 
     using MongoDB.Bson;
     using MongoDB.Driver;
@@ -15,7 +15,9 @@ namespace Data.Repository.Implementation
 
     
     /// <summary> Base Repository Logic </summary>
-    public class MongoRepositoryBase<TEntity> : IReadWriteRepository<TEntity>
+    
+    // TODO: Consider making this more generic (e.g. IEntity<Guid> to IEntity<TIdentifier>)
+    public class MongoRepositoryBase<IEntity> : IRepository<IEntity> where IEntity : class, IEntity<Guid>
     {
         private readonly IMongoDatabase _database;
 
@@ -25,19 +27,28 @@ namespace Data.Repository.Implementation
             this._database = client.GetDatabase("forum");
         }
 
-        public TEntity Get(object id)
-            => this._database.GetCollection<TEntity>(typeof(TEntity).Name).Find(x => x.TIdentifier.Equals(id)).FirstOrDefaultAsync().Result;
+        public IEntity Get(object id)
+            => this._database.GetCollection<IEntity>(typeof(IEntity).Name).Find(x => x.Id.Equals(id)).FirstOrDefault();
         
-        public IEnumerable<TEntity> GetAll()
-            => this._database.GetCollection<TEntity>(typeof(TEntity).Name).Find(new BsonDocument()).ToListAsync().Result;
+        public IEnumerable<IEntity> GetAll()
+            => this._database.GetCollection<IEntity>(typeof(IEntity).Name).Find(new BsonDocument()).ToListAsync().Result;
 
-        public async Task<IEnumerable<TEntity>> GetAllAsync()
-            => await this._database.GetCollection<TEntity>(typeof(TEntity).Name).Find(new BsonDocument()).ToListAsync();
+        public async Task<IEnumerable<IEntity>> GetAllAsync()
+            => await this._database.GetCollection<IEntity>(typeof(IEntity).Name).Find(new BsonDocument()).ToListAsync();
 
-        public TEntity Delete(TEntity item) =>  throw new NotImplementedException();
+        public IEntity Delete(IEntity item) =>  throw new NotImplementedException();
 
-        public TEntity Create(TEntity item) =>  throw new NotImplementedException();
+        public IEntity Create(IEntity item)
+        {
+             var collection = this._database.GetCollection<IEntity>(typeof(IEntity).Name);
+             
+             collection.ReplaceOneAsync(x => x.Id.Equals(item.Id), item, new UpdateOptions{
+                IsUpsert = true
+            });
 
-        public TEntity Update(TEntity item) =>  throw new NotImplementedException();
+            return item;
+        }
+
+        public IEntity Update(IEntity item) =>  throw new NotImplementedException();
     }
 }
